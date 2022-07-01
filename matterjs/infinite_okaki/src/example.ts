@@ -42,6 +42,8 @@ export const example = () => {
 		{ x: 2*scale, y: 133*scale },
 	]];
 	const okakiOptions = {
+		friction: 1,
+		restitution: 0,
 		render: {
 			sprite: {
 				texture: texture,
@@ -52,6 +54,7 @@ export const example = () => {
 	};
 	const ground = Bodies.rectangle(400, 610, 810, 60, {
 		isStatic: true,
+		friction: 1,
 		render: {
 			 fillStyle: "#888",
 		}
@@ -87,7 +90,6 @@ export const example = () => {
 		const x = event.offsetX;
 		const y = event.offsetY;
 		const newOkaki = Bodies.fromVertices(x, y, okakiShape, okakiOptions);
-		newOkaki.friction = 1;
 		okakies.push(newOkaki);
 		Composite.add(engine.world, [newOkaki]);
 	})
