@@ -27,9 +27,9 @@ export const example = () => {
 	});
 	
 	// create two boxes and a ground
-	const scale:number = 0.25;
+	const scale:number = 0.2;
 	const okakiShape = [[
-		{ x: 100, y: 26 },
+		{ x: 100*scale, y: 26*scale },
 		{ x: 214*scale, y: 1*scale },
 		{ x: 368*scale, y: 25*scale },
 		{ x: 429*scale, y: 65*scale },
@@ -45,8 +45,8 @@ export const example = () => {
 		render: {
 			sprite: {
 				texture: texture,
-				xScale: 0.25,
-				yScale: 0.25
+				xScale: scale,
+				yScale: scale
 			}
 		}
 	};
