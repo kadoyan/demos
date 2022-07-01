@@ -87,6 +87,7 @@ export const example = () => {
 		const x = event.offsetX;
 		const y = event.offsetY;
 		const newOkaki = Bodies.fromVertices(x, y, okakiShape, okakiOptions);
+		newOkaki.friction = 1;
 		okakies.push(newOkaki);
 		Composite.add(engine.world, [newOkaki]);
 	})
