@@ -1,4 +1,5 @@
 import Matter from "matter-js";
+import texture from "./images/okaki.png";
 
 export const example = () => {
 
@@ -43,7 +44,7 @@ export const example = () => {
 	const okakiOptions = {
 		render: {
 			sprite: {
-				texture: 'images/okaki.png',
+				texture: texture,
 				xScale: 0.25,
 				yScale: 0.25
 			}
