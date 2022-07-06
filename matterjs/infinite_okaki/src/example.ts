@@ -1,5 +1,5 @@
 import Matter from "matter-js";
-import texture from "./images/okaki.png";
+import texture from "./images/creampuff.png";
 
 export const example = () => {
 
