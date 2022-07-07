@@ -28,7 +28,7 @@ export const example = () => {
 	
 	// create two boxes and a ground
 	const scale:number = 0.2;
-	const okakiShape = [[
+	const puffShape = [[
 		{ x: 100*scale, y: 26*scale },
 		{ x: 214*scale, y: 1*scale },
 		{ x: 368*scale, y: 25*scale },
@@ -41,7 +41,7 @@ export const example = () => {
 		{ x: 15*scale, y: 289*scale },
 		{ x: 2*scale, y: 133*scale },
 	]];
-	const okakiOptions = {
+	const puffOptions = {
 		friction: 1,
 		restitution: 0,
 		render: {
@@ -72,10 +72,10 @@ export const example = () => {
 	// run the engine
 	Runner.run(runner, engine);
 
-	//create okakies
-	const okakies = new Array();
+	//create puffes
+	const puffes = new Array();
 	const loop = () => {
-		okakies.forEach((el) => {
+		puffes.forEach((el) => {
 			const leftX = el.bounds.min.x;
 			const rightX = el.bounds.max.x;
 			if (leftX < -100 || rightX > render.bounds.max.x + 100) {
@@ -89,8 +89,8 @@ export const example = () => {
 	stage.addEventListener("click", function(event) {
 		const x = event.offsetX;
 		const y = event.offsetY;
-		const newOkaki = Bodies.fromVertices(x, y, okakiShape, okakiOptions);
-		okakies.push(newOkaki);
-		Composite.add(engine.world, [newOkaki]);
+		const newPuff = Bodies.fromVertices(x, y, puffShape, puffOptions);
+		puffes.push(newPuff);
+		Composite.add(engine.world, [newPuff]);
 	})
 } 
