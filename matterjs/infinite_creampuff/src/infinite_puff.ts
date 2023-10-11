@@ -44,6 +44,8 @@ export const example = () => {
 	const puffOptions = {
 		friction: 1,
 		restitution: 0,
+		frictionStatic: 10,
+		slop: 0.5,
 		render: {
 			sprite: {
 				texture: texture,
